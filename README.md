@@ -10,7 +10,7 @@ The data(items) are coming from a file named "data.json", in which an array of o
 
 ## Functionality 
 * Modules
-  - Product => Contains the module of product, the properties of the product and their types.
+  - Product => Contains the module of product, the properties of the product and the properties types.
 
 * Components
   - Navbar => Displays a simple navbar functionality.
