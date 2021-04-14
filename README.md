@@ -9,6 +9,9 @@ The idea behind this simple project is to simulate an online shop without its ma
 The data(items) are coming from a file named "data.json", in which an array of objects is included to simulate a database for the items. 
 
 ## Functionality 
+* Modules
+  - Product => Contains the module of product, the properties of the product and their types.
+
 * Components
   - Navbar => Displays a simple navbar functionality.
   - Showcase => The showcase displays the "logo" of the online shop.
