@@ -1,0 +1,6 @@
+.showcase {
+    background: url('../../../assets/showcase-bg.jpg')
+    no-repeat top center/cover;
+    height:130vh;
+    margin-top:-9rem;
+}

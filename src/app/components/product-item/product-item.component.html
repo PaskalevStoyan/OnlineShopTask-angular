@@ -1,0 +1,38 @@
+<div class="product m-5">
+    <img [src]="product.image" alt="" class="product-img" [ngClass]="{'out-of-stock': product.UnitsInStock === 0}">
+    <div [id]="product.ProductID" class=" mt-1 text-center">
+        <p class="mt-2">{{ product.ProductName }}
+            <span *ngIf="product.UnitsInStock === 0" class="out-of-stock-heading">(out of stock)</span>
+        </p>
+        <p>{{ product.UnitPrice | number: '1.2-2'}} $</p>
+    </div>
+    <button (click)="open(prodModal)" [disabled]="product.UnitsInStock === 0" class="btn btn-primary mt-2">
+        More info</button>
+    <div>
+        <ng-template #prodModal let-modal>
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">{{ product.ProductName }}</h4>
+
+            </div>
+            <div class="modal-body">
+                <div class="modal-content">
+                    <img class="modal-product-img" [src]="product.image" alt="">
+                    <div class="product-modal-information">
+                        <ul class="modal-info-list">
+                            <li>Price: {{ product.UnitPrice }} $</li>
+                            <li>In stock: {{ product.UnitsInStock }}</li>
+                            <li>Delivery date: {{ editProductDate(product) }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-product-description">
+                    <span class="desc">Description: </span> <p>{{ product.description }}</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" >Add to cart</button>
+                <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Go back</button>
+            </div>
+        </ng-template>
+    </div>
+</div>
