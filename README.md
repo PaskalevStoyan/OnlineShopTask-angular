@@ -1,4 +1,4 @@
-# OnlineShopTask
+# OnlineShopTask - Angular
 This is a simple website for online grocery shopping
 
 ## Technologies
